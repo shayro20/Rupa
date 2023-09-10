@@ -224,7 +224,7 @@ function CatalogPage() {
           </div>
           <div className="catalog-item-container">
             <Image className="item" src={pic} alt="demo image" />
-            <h3>item 1</h3>
+            <h3>item 2</h3>
             <h3>price $</h3>
             <h3>available colors</h3>
             <div>
