@@ -1,14 +1,20 @@
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
+import Link from "next/link";
 import pic from "../public/demopic.jpg";
+import { useState } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
 function CatalogPage() {
+  const [active, setActive] = useState(false);
+  const menuHandler = () => {
+    console.log("i am clikced");
+    setActive(!active);
+  };
   return (
     <>
-      <h1>catalog page</h1>
       <div className="catalog-container">
         <div className="grid-container ">
           <div className="catalog-item-container">
@@ -28,6 +34,7 @@ function CatalogPage() {
             </h3>
             <button>add to cart</button>
             <button>buy now</button>
+            <Link href="/catalog/item">details</Link>
           </div>
           <div className="catalog-item-container">
             <Image className="item" src={pic} alt="demo image" />
