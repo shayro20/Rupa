@@ -4,15 +4,11 @@ import { Inter } from "next/font/google";
 import Link from "next/link";
 import pic from "../public/demopic.jpg";
 import { useState } from "react";
+console.log(process.env.MONGODB_URI);
 
 const inter = Inter({ subsets: ["latin"] });
 
 function CatalogPage() {
-  const [active, setActive] = useState(false);
-  const menuHandler = () => {
-    console.log("i am clikced");
-    setActive(!active);
-  };
   return (
     <>
       <div className="catalog-container">
